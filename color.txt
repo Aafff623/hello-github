@@ -2,5 +2,5 @@
 blue
 red
 yellow
-black
+white
 orange
