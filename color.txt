@@ -2,3 +2,5 @@
 blue
 red
 yellow
+black
+orange
