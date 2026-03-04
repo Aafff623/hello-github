@@ -1,0 +1,4 @@
+测试冲突文件
+blue
+red
+yellow
