@@ -3,3 +3,4 @@ blue
 red
 yellow
 white
+purple
