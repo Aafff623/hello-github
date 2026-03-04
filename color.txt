@@ -1,4 +1,2 @@
-测试冲突文件
 black
-yellow
 blue
