@@ -1,0 +1,24 @@
+name: Multi_Env
+
+on:
+  workfow_dispatch:
+   
+jobs:
+
+  depoly_QA:
+    runs-on: ubuntu-latest
+    environment: QA
+    steps:
+    -uses: actions/checkout@v4
+    
+  depoly_STG:
+    runs-on: ubuntu-latest
+    environment: STG
+    steps:
+    -uses: actions/checkout@v4
+      
+  depoly_PROD:
+    runs-on: ubuntu-latest
+    environment: PROD
+    steps:
+    -uses: actions/checkout@v4
