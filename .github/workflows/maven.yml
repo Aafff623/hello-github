@@ -36,7 +36,7 @@ jobs:
           # 打包生成的 jar 包路径
           SOURCE: "target/github-actions-springboot-1.0.jar"
           # 远程服务器 IP 地址
-          REMOTE_HOST: 180.76.120.166
+          REMOTE_HOST: 47.253.246.68
           # 远程服务器用户名
           REMOTE_USER: root
           # 远程服务器存放路径
