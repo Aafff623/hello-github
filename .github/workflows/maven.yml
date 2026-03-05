@@ -1,0 +1,47 @@
+# 这是一个用于构建 Java 项目并在成功后通过 SSH 部署到服务器的 GitHub Actions 工作流
+name: Java CI with Maven
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. 检出代码
+      - uses: actions/checkout@v4
+
+      # 2. 配置 Java 17 环境 (使用 Temurin 发行版，并开启 Maven 缓存)
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+          cache: maven
+
+      # 3. 使用 Maven 执行编译打包
+      - name: Build with Maven
+        run: mvn -B package --file pom.xml
+
+      # 4. 部署到远程服务器
+      - name: Deploy to Server
+        uses: easingthemes/ssh-deploy@main
+        with:
+          # 在 GitHub 项目的 Settings -> Secrets 中配置的私钥
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+          # 打包生成的 jar 包路径
+          SOURCE: "target/github-actions-springboot-1.0.jar"
+          # 远程服务器 IP 地址
+          REMOTE_HOST: 180.76.120.166
+          # 远程服务器用户名
+          REMOTE_USER: root
+          # 远程服务器存放路径
+          TARGET: /root/springboot/github-actions.jar
+          # 部署后执行的脚本：先停止旧进程，再后台启动新进程
+          SCRIPT_AFTER: |
+            pkill -f 'java -jar /root/springboot/github-actions.jar' || true
+            nohup java -jar /root/springboot/github-actions.jar > /dev/null 2>&1 &
