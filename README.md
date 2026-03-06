@@ -10,40 +10,51 @@
 
 ## 📖 目录
 
-- [项目简介](#-项目简介)
-- [学习内容](#-学习内容)
-- [快速开始](#-快速开始)
-- [目录结构](#-目录结构)
-- [学习资源](#-学习资源)
-- [贡献指南](#-贡献指南)
-- [许可证](#-许可证)
+- [🙋‍♂️ 个人介绍](#-个人介绍)
+- [📚 学习内容](#-学习内容)
+- [🚀 快速开始](#-快速开始)
+- [📁 目录结构](#-目录结构)
+- [🛠️ 技术栈](#-技术栈)
+- [📖 学习资源](#-学习资源)
+- [🤝 贡献指南](#-贡献指南)
+- [📄 许可证](#-许可证)
 
 ---
 
-## 🎯 项目简介
+## 🙋‍♂️ 个人介绍
 
-`hello-github` 是一个专注于 Git 和 GitHub 实践学习的开源仓库。本项目通过系统化的学习路径和实战示例，帮助开发者从基础到进阶掌握 Git 版本控制和 GitHub 协作流程。
+你好！我是 **Aafff623**，这是我的 GitHub 学习仓库 🎉
 
-无论你是编程新手想了解基础的分支管理，还是资深开发者希望优化 CI/CD 工作流，这里都能提供实用的参考和示例。
+此前上学期的我对于github没有进行系统化的学习, 如今作为一个"入门新手"，这个仓库记录了我从零开始学习 Git 和 GitHub 的完整历程。从最基础的"什么是 Git"到后来折腾 GitHub Actions、Webhooks organization 等高级功能，每一步的成长都被我记录了下来并且作为Commit push上去。
+
+如果你也是刚接触 GitHub 的新手，欢迎参考我的学习路径！(推荐皮皮虾的github课程) , 如果有任何问题，欢迎提 [Issues](https://github.com/Aafff623/hello-github/issues) 交流~
+
+> 💡 **学习心得**: 真的不要只看教程，自己动手操作一遍印象会深很多！
 
 ---
 
 ## 📚 学习内容
 
+这个仓库涵盖了我学习过的所有知识点：
+
 | 主题 | 说明 |
 |------|------|
-| **Git 基础** | 仓库结构、提交历史、分支管理、合并冲突 |
+| **Git 基础** | 仓库创建、提交历史、分支管理、合并冲突解决 |
 | **GitHub 工作流** | Fork、Pull Request、代码审查流程 |
-| **GitHub Actions** | CI/CD 自动化构建与部署配置 |
-| **GitHub Pages** | 静态网站部署与自定义域名 |
-| **Webhooks & API** | 通过 REST API 集成外部服务 |
-| **Git LFS** | 大文件存储与管理优化 |
-| **安全功能** | 仓库保护与漏洞扫描设置 |
-| **客户端工具** | Desktop、IDEA、VS Code 集成使用 |
+| **GitHub Desktop** | 图形化界面操作，方便新手上手 |
+| **IDEA Git 集成** | 在 IDE 中直接使用 Git |
+| **VS Code + GitLens** | 编辑器内置 Git 功能 |
+| **Git 命令行** | 深入理解底层命令 |
+| **Git LFS** | 大文件存储优化 |
+| **GitHub Actions** | CI/CD 自动化构建与部署 |
+| **GitHub Packages** | 包管理功能 |
+| **GitHub Pages** | 静态网站部署 |
+| **Webhooks & REST API** | 自动化集成外部服务 |
+| **仓库高级管理** | 组织创建、安全设置 |
 
 ---
 
-## 🚀 快速开始
+## 🚀 核心学习知识点
 
 ```bash
 # 克隆仓库到本地
@@ -73,47 +84,62 @@ git push origin feature/your-feature-name
 
 ```
 hello-github/
-├── .claude/              # Claude Code AI 配置
-│   ├── settings.json     # IDE 和工具配置文件
-│   └── rules/            # 开发规则与指南
-├── docs/                 # 文档与学习资料
-│   └── shirp_github_note/ # PDF 学习笔记资料
-├── src/                  # 源代码示例
-│   └── test/             # 测试脚本与演示
-├── .git/                 # Git 仓库数据
-├── .gitattributes        # Git 属性配置
-├── .gitignore            # 忽略文件配置
-├── LICENSE               # MIT 许可证
-├── CONTRIBUTING.md       # 贡献指南
-└── README.md             # 项目说明文档
+├── .github/                  # GitHub 自动化配置
+│   ├── workflows/            # CI/CD 工作流示例
+│   └── dependabot.yml        # 依赖自动更新配置
+├── docs/                     # 学习资料
+│   ├── note/                 # 个人整理的笔记
+│   └── shirp_github_note/    # 课程配套 PDF (38篇)
+├── src/                      # 练习代码
+│   └── test/                 # 测试脚本
+├── main.py                   # Python 入口文件
+├── demo6.py                  # 示例代码
+├── test_demo.py              # 测试用例
+├── color.txt                 # 小工具
+├── requirements.txt          # Python 依赖
+├── package.json              # Node.js 配置
+├── CLAUDE.md                 # Claude Code 配置
+├── CONTRIBUTING.md           # 贡献指南
+├── LICENSE                   # MIT 许可证
+└── README.md                 # 项目说明
 ```
 
 ---
 
-## 📚 学习资源
+## 🛠️ 技术栈
+
+学习过程中使用到的工具：
+
+- **版本控制**: Git, GitHub
+- **客户端**: GitHub Desktop, IDEA, VS Code
+- **编程语言**: Python, JavaScript
+- **自动化**: GitHub Actions, Webhooks
+- **部署**: GitHub Pages, Docker
+
+---
+
+## 📖 学习资源
 
 ### 官方文档
-- [GitHub 官方文档](https://docs.github.com/zh) - GitHub 功能完整参考
-- [Pro Git 中文版](https://git-scm.com/book/zh/v2) - 免费的 Git 综合指南
-- [GitHub 学习实验室](https://skills.github.com) - 交互式教程
+- [GitHub 官方文档](https://docs.github.com/zh) - 最权威的参考
+- [Pro Git 中文版](https://git-scm.com/book/zh/v2) - 免费的 Git 书籍
+- [GitHub Skills](https://skills.github.com) - 交互式入门教程
 
-### 工具与客户端
-- [GitHub Desktop](https://desktop.github.com) - Git 和 GitHub 的图形界面工具
-- [GitKraken](https://www.gitkraken.com) - 可视化 Git 客户端
-- [VS Code GitLens](https://marketplace.visualstudio.com/items?itemName=gitkraken.gitlens) - VS Code 中增强的 Git 功能
+### 我的学习笔记
+仓库中整理了 **38篇** 配套学习笔记 PDF，其中两篇 /note 下的是自己手敲的, /docs 下的是通过百度的ai总结视频 -> pdf的, 基本涵盖了从基础到进阶的完整内容。
 
-### 学习建议
-1. 先掌握 Git 基础概念（本地仓库、暂存区、远程仓库）
-2. 熟悉分支管理与合并策略
-3. 实践 Pull Request 工作流程
-4. 配置 CI/CD 自动化工作流
-5. 探索 GitHub 高级功能（Packages、Pages、Actions）
+### 学习建议（踩坑总结）
+1. 🌱 新手推荐从 GitHub Desktop 入手，图形界面更直观
+2. 📖 一定要看官方文档，比第三方教程更准确
+3. 🔄 多动手练习，命令行才是真正的大招
+4. 🐛 遇到冲突别慌，这是最好的学习机会
+5. 🤖 试试用 Actions 自动化一些简单任务
 
 ---
 
 ## 🤝 贡献指南
 
-欢迎任何形式的贡献！请遵循以下流程：
+欢迎任何形式的贡献！即使是纠正一个错别字也很有帮助~
 
 1. Fork 本仓库
 2. 创建你的特性分支：`git checkout -b feature/amazing-feature`
@@ -132,6 +158,7 @@ hello-github/
 - `refactor:` - 代码重构
 - `perf:` - 性能优化
 - `test:` - 测试相关
+- `chore:` - 日常维护
 
 ---
 
@@ -140,30 +167,39 @@ hello-github/
 本项目采用 MIT 许可证 - 详见 [LICENSE](LICENSE) 文件。
 
 ```
-MIT 许可证
+MIT License
 
 Copyright (c) 2026-present, Aafff623
 
-特此免费授予任何 获取本软件和相关文档文件（"软件"）的人处理软件的权限，
-包括但不限于使用、复制、修改、合并、出版、分发、再许可和/或销售软件的副本，
-并允许软件提供给其接受的人员，须符合以下条件：
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
-上述版权声明和本许可声明应包含在软件的所有副本或重要部分中。
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
 
-本软件按"原样"提供，无任何明示或暗示的保证，包括但不限于适销性、特定用途适用性和非侵权性的保证。
-在任何情况下，作者或版权持有人均不对因软件或使用软件或其他交易中的软件而导致的任何索赔、损害或其他责任负责，无论是在合同、侵权或其他行为的基础上。
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
 ```
 
 ---
 
-## 🌟 致谢
+## 🏃‍♂️ 继续学习
 
-感谢所有为本项目做出贡献的开发者和学习者！
+学无止境！如果你对这个仓库感兴趣，欢迎 Star ⭐ 或 Follow 我的 GitHub！
 
-如有问题或建议，欢迎通过 [Issues](https://github.com/Aafff623/hello-github/issues) 联系我们。
+> 🚀 学习 GitHub 的路上，我们一起进步！
 
 ---
 
 <p align="center">
-  <sub>✨ 为开发者社区打造的学习资源</sub>
+  <sub>✨ 记录一个普通学生的 GitHub 学习之旅</sub>
 </p>
